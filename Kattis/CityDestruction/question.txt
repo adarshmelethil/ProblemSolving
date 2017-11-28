@@ -1,0 +1,24 @@
+Modan is playing a new action strategy game, where his goal is to destroy a city.
+
+A city is made up of NN buildings, where the ii-th building initially has health HiHi. At every move, Modan can choose a building to attack, dealing DD damage to it. When a building’s health falls below or equal to 00, it is destroyed. When the ii-th building gets destroyed, it explodes and deals EiEi damage to the adjacent buildings, i.e. the i−1i−1-th and i+1i+1-th buildings, if they exist.
+
+Modan is really addicted to the game and wants to know the minimum number of moves he needs to destroy a city.
+
+Input
+The first line contains a single integer T≤100T≤100 giving the number of test cases. Each test case has three lines. On the first line, there are two integers NN (1≤N≤100001≤N≤10000), the number of buildings, and DD (1≤D≤1091≤D≤109), the amount of damage Modan can do. On the second line, there are NN integers, with the ii-th integer being HiHi (1≤Hi≤1091≤Hi≤109), the initial health of the ii-th building. On the third line, there are NN integers, with the ii-th integer being EiEi (0≤Ei≤1090≤Ei≤109), the amount of explosion damage the ii-th building does.
+
+Output
+For each test case, output a single line containing the minimum number of moves needed to destroy the city.
+
+Sample Input 1	
+2
+1 10
+33
+54
+3 10
+43 10 59
+69 69 69
+
+Sample Output 1
+4
+1

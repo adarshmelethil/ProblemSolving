@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#MultiplesOf3And5.py
+#LargestPalindromeProduct.py
 
 import sys
 import argparse
