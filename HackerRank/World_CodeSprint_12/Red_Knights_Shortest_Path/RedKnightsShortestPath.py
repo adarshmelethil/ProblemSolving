@@ -21,33 +21,35 @@ def printShortestPath(n, i_start, j_start, i_end, j_end):
         return
     
     total_moves = 0
-    moves = ""
+    moves_l = ['UL', 'UR', 'R', 'LR', 'LL', 'L']
+    moves_c = [0, 0, 0, 0, 0, 0]
     while i_start != i_end or j_start != j_end:
         total_moves += 1
         if i_start > i_end:
             i_start -= 2
             if j_start >= j_end:
-                moves += "UL "
+                moves_c[0] += 1
                 j_start -= 1 
             else:
-                moves += "UR "
+                moves_c[1] += 1
                 j_start += 1 
         elif i_start < i_end:
             i_start += 2
             if j_start >= j_end:
-                moves += "LL "
+                moves_c[4] += 1
                 j_start -= 1 
             else:
-                moves += "LR "
+                moves_c[3] += 1
                 j_start += 1 
         elif j_start < j_end:
             j_start += 2
-            moves += "R "
+            moves_c[2] += 1
         elif j_start > j_end:
             j_start -= 2
-            moves += "L "
+            moves_c[5] += 1
     print(total_moves)
-    print(moves)
+    
+    print(' '.join([' '.join([moves_l[i]]*val) for i,val in enumerate(moves_c) if val > 0] ) )
 
 
 
