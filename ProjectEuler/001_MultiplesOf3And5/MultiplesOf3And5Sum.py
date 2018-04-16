@@ -21,7 +21,6 @@ def main(_):
 			sum_total += num
 	print(sum_total)
 			
-
 if __name__=='__main__':
 	parser = argparse.ArgumentParser(description='Mapper to calculate n-gram')
 	parser.add_argument('-b','--sum_below', action='store', type=int, default=1000)
